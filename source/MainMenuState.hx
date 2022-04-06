@@ -139,7 +139,7 @@ class MainMenuState extends MusicBeatState
 
 		changeItem();
 
-		#if ACHIEVEMENTS_ALLOWED
+		   #if ACHIEVEMENTS_ALLOWED
 		Achievements.loadAchievements();
 		var leDate = Date.now();
 		if (leDate.getDay() == 5 && leDate.getHours() >= 18) {
@@ -159,7 +159,7 @@ class MainMenuState extends MusicBeatState
 		super.create();
 	}
 
-	#if ACHIEVEMENTS_ALLOWED
+	   #if ACHIEVEMENTS_ALLOWED
 	// Unlocks "Freaky on a Friday Night" achievement
 	function giveAchievement() {
 		add(new AchievementObject('friday_night_play', camAchievement));
